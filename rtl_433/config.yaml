@@ -18,4 +18,4 @@ options:
   rtl_433_arg_str: "-h"
 schema:
   rtl_433_arg_str: "str?"
-image: "ghcr.io/joshpearce/amd64-ha_rtl_433_addon:latest"
+image: "ghcr.io/joshpearce/{arch}-ha_rtl_433_addon:latest"
