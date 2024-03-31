@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: rtl_433 add-on
-version: "0.1.0"
+version: "latest"
 slug: rtl_433
 description: runs rtl_r33, typically as an MQTT client
 url: "https://github.com/joshpearce/rtl_433_addon"
