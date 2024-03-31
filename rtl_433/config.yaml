@@ -1,20 +1,21 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
-name: Example add-on
-version: "1.2.0"
-slug: example
-description: Example add-on
-url: "https://github.com/home-assistant/addons-example/tree/main/example"
+name: rtl_433 add-on
+version: "0.1.0"
+slug: rtl_433
+description: runs rtl_r33, typically as an MQTT client
+url: "https://github.com/joshpearce/rtl_433_addon"
 arch:
-  - armhf
-  - armv7
-  - aarch64
+  # - armhf
+  # - armv7
+  # - aarch64
   - amd64
-  - i386
+  # - i386
 init: false
+usb: true
 map:
   - share:rw
 options:
-  message: "Hello world..."
+  rtl_433_arg_str: "-h"
 schema:
-  message: "str?"
-image: "ghcr.io/home-assistant/{arch}-addon-example"
+  rtl_433_arg_str: "str?"
+image: "ghcr.io/joshpearce/amd64-ha_rtl_433_addon:latest"

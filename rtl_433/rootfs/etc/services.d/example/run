@@ -7,13 +7,11 @@
 # Add your code here
 
 # Declare variables
-declare message
+declare rtl_433_arg_str
 
-## Get the 'message' key from the user config options.
-message=$(bashio::config 'message')
+rtl_433_arg_str=$(bashio::config 'rtl_433_arg_str', '-h')
 
-## Print the message the user supplied, defaults to "Hello World..."
-bashio::log.info "${message:="Hello World..."}"
+bashio::log.info "Using program arguments: ${rtl_433_arg_str}"
 
 ## Run your program
-exec /usr/bin/my_program
+exec /bin/rtl_433 ${rtl_433_arg_str}
