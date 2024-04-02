@@ -1,0 +1,19 @@
+Pushing to registry
+
+ export CR_PAT=YOUR_TOKEN
+
+skopeo login -u joshpearce -p $CR_PAT ghcr.io
+
+skopeo copy docker-archive://$(readlink -f ./result) docker://ghcr.io/joshpearce/amd64-ha_rtl_433_addon:latest
+
+https://ryantm.github.io/nixpkgs/builders/images/dockertools/
+
+
+tar cf - rtl_433 | ssh root@ha.jjpdev.com 'cd /addons && tar xf -' 
+
+gunzip -c $(readlink -f ./result) > result.tar
+dive docker-archive://result.tar 
+
+podman run -it localhost/test:latest bash
+
+podman system prune --all --force && podman rmi --all
