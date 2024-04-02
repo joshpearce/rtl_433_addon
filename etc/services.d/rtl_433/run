@@ -14,4 +14,5 @@ rtl_433_arg_str=$(bashio::config 'rtl_433_arg_str', '-h')
 bashio::log.info "Using program arguments: ${rtl_433_arg_str}"
 
 ## Run your program
-exec /bin/rtl_433 $(echo $rtl_433_arg_str)
+exec ls /addon_configs/rtl_433/
+#exec /bin/rtl_433 -c /addon_configs/rtl_433/default.conf

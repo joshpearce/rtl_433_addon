@@ -12,8 +12,9 @@ arch:
   # - i386
 init: false
 usb: true
+udev: true
 map:
-  - addon_config:r
+  - addon_config:ro
 options:
   rtl_433_arg_str: "-h"
 schema:
