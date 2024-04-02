@@ -13,7 +13,7 @@ arch:
 init: false
 usb: true
 map:
-  - share:rw
+  - addon_config:r
 options:
   rtl_433_arg_str: "-h"
 schema:

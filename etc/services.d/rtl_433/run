@@ -1,0 +1,17 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Start the example service
+# s6-overlay docs: https://github.com/just-containers/s6-overlay
+# ==============================================================================
+
+# Add your code here
+
+# Declare variables
+declare rtl_433_arg_str
+
+rtl_433_arg_str=$(bashio::config 'rtl_433_arg_str', '-h')
+
+bashio::log.info "Using program arguments: ${rtl_433_arg_str}"
+
+## Run your program
+exec /bin/rtl_433 $(echo $rtl_433_arg_str)
